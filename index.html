@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Countdown Lunar New Year</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+    <div class="heading">
+        <p class="title">Countdown Lunar New Year</p>
+        <p id="today" class="subtitle"></p>
+    </div>
+    <div class="countdown">
+        <div class="time">
+            <div class="time-box">
+                <p id="days" class="time-value"></p>
+            </div>
+            <p class="time-lable">Days</p>
+        </div>
+        <div class="time">
+            <div class="time-box">
+                <p id="hours" class="time-value"></p>
+            </div>
+            <p class="time-lable">Hours</p>
+        </div>
+        <div class="time">
+            <div class="time-box">
+                <p id="minutes" class="time-value"></p>
+            </div>
+            <p class="time-lable">Minutes</p>
+        </div>
+        <div class="time">
+            <div class="time-box">
+                <p id="seconds" class="time-value"></p>
+            </div>
+            <p class="time-lable">Seconds</p>
+        </div>
+    </div>
+    <p class="note">
+        Tết ([tet˧˥] or [təːt˧˥]), Vietnamese New Year, Vietnamese Lunar New Year or Tet Holiday, is the most important celebration in Vietnamese culture. The word is a shortened form of Tết Nguyên Đán (節元旦), which is Sino-Vietnamese for "Feast of the First Morning of the First Day". Tết celebrates the arrival of spring based on the Vietnamese calendar, which usually has the date falling in January or February in the Gregorian calendar.
+    </p>
+</div>
+    <script>
+        document.getElementById('today').innerText = new Date().toDateString();
+        // Set the date we're counting down to
+        const countDownDate = new Date("2/12/2021 00:00:00").getTime();
+        
+        // Update the count down every 1 second
+        const x = setInterval(function() {
+        
+          // Get today's date and time
+          const now = new Date().getTime();
+        
+          // Find the distance between now and the count down date
+          const distance = countDownDate - now;
+        
+          // Time calculations for days, hours, minutes and seconds
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+          document.getElementById('days').innerText = days;
+          document.getElementById('hours').innerText = hours;
+          document.getElementById('minutes').innerText = minutes;
+          document.getElementById('seconds').innerText = seconds;
+        
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById('days').innerText = 0;
+            document.getElementById('hours').innerText = 0;
+            document.getElementById('minutes').innerText = 0;
+            document.getElementById('seconds').innerText = 0;
+          }
+        }, 1000);
+    </script>
+</body>
+</html>

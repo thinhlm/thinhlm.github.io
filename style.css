@@ -1,0 +1,83 @@
+body {
+    background: linear-gradient(225deg, rgba(126,179,188,0.52) 0%, #0B5335 100%), center / cover no-repeat url(background.jpg);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 650px;
+}
+
+.heading {
+    margin-bottom: 46px;
+}
+
+.title {
+    font-family: DroidSerif;
+    font-size: 41px;
+    color: #FFFFFF;
+}
+
+.subtitle {
+    font-family: Muli;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+.note {
+    font-family: Muli;
+    font-size: 10px;
+    color: #FFFFFF;
+    line-height: 17px;
+}
+
+.time {
+    min-width: 150px;
+}
+
+.time:first-child .time-box {
+    border-radius: 25px 0 0 25px;
+}
+
+.time:last-child .time-box {
+    border-radius: 0 25px 25px 0;
+}
+
+.time-box {
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 17px 18px 0 #28664E;
+    height: 127px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-value {
+    font-family: Bitter-Bold;
+    font-size: 48px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.time-lable {
+    font-family: Muli;
+    font-size: 21px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 27px;
+}
